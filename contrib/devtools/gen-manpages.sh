@@ -4,9 +4,9 @@ TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 SRCDIR=${SRCDIR:-$TOPDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-ZCASHD=${ZCASHD:-$SRCDIR/zcashd}
-ZCASHCLI=${ZCASHCLI:-$SRCDIR/zcash-cli}
-ZCASHTX=${ZCASHTX:-$SRCDIR/zcash-tx}
+ZCASHD=${ZCASHD:-$SRCDIR/swiftcashd}
+ZCASHCLI=${ZCASHCLI:-$SRCDIR/swiftcash-cli}
+ZCASHTX=${ZCASHTX:-$SRCDIR/swiftcash-tx}
 
 [ ! -x $ZCASHD ] && echo "$ZCASHD not found or not executable." && exit 1
 

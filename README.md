@@ -1,4 +1,4 @@
-SwiftCash 1.0.1
+SwiftCash 1.0.0
 =============
 
 What is SwiftCash

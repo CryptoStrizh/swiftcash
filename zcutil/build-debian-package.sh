@@ -38,8 +38,8 @@ chmod 0755 -R $BUILD_DIR/*
 #cp $SRC_DEB/preinst $BUILD_DIR/DEBIAN
 #cp $SRC_DEB/prerm $BUILD_DIR/DEBIAN
 # Copy binaries
-cp $SRC_PATH/src/scashd $DEB_BIN
-cp $SRC_PATH/src/scash-cli $DEB_BIN
+cp $SRC_PATH/src/swiftcashd $DEB_BIN
+cp $SRC_PATH/src/swiftcash-cli $DEB_BIN
 cp $SRC_PATH/zcutil/fetch-params.sh $DEB_BIN/zcash-fetch-params
 # Copy docs
 cp $SRC_PATH/doc/release-notes/release-notes-1.0.0.md $DEB_DOC/changelog
@@ -51,8 +51,8 @@ cp $SRC_DOC/man/zcashd.1 $DEB_MAN
 cp $SRC_DOC/man/zcash-cli.1 $DEB_MAN
 cp $SRC_DOC/man/zcash-fetch-params.1 $DEB_MAN
 # Copy bash completion files
-cp $SRC_PATH/contrib/scashd.bash-completion $DEB_CMP/swiftcashd
-cp $SRC_PATH/contrib/scash-cli.bash-completion $DEB_CMP/swiftcash-cli
+cp $SRC_PATH/contrib/swiftcashd.bash-completion $DEB_CMP/swiftcashd
+cp $SRC_PATH/contrib/swiftcash-cli.bash-completion $DEB_CMP/swiftcash-cli
 # Gzip files
 gzip --best -n $DEB_DOC/changelog
 gzip --best -n $DEB_DOC/changelog.Debian
@@ -63,7 +63,7 @@ gzip --best -n $DEB_MAN/zcash-fetch-params.1
 cd $SRC_PATH/contrib
 
 # Create the control file
-dpkg-shlibdeps $DEB_BIN/scashd $DEB_BIN/scash-cli
+dpkg-shlibdeps $DEB_BIN/swiftcashd $DEB_BIN/swiftcash-cli
 dpkg-gencontrol -P$BUILD_DIR -v$DEBVERSION
 
 # Create the Debian package
